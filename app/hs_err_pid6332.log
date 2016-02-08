@@ -1,0 +1,42 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 176192 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:323), pid=6332, tid=12624
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_71-b14) (build 1.7.0_71-b14)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.71-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000081b2000):  JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=12624, stack(0x0000000009820000,0x0000000009920000)]
+
+Stack: [0x0000000009820000,0x0000000009920000]
+
+Current CompileTask:
+C2:   4556  165             com.android.dx.ssa.SsaConverter::placePhiFunctions (394 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000009d7c000 JavaThread "pool-1-thread-4" [_thread_in_Java, id=10692, stack(0x000000000a320000,0x000000000a420000)]
+  0x0000000009d73000 JavaThread "pool-1-thread-3" [_thread_in_Java, id=224, stack(0x000000000a220000,0x000000000a320000)]
+  0x0000000009d6e000 JavaThread "pool-1-thread-2" [_thread_in_Java, id=11200, stack(0x000000000a120000,0x000000000a220000)]
+  0x0000000009c6f000 JavaThread "pool-2-thread-1" [_thread_blocked, id=10984, stack(0x000000000a020000,0x000000000a120000)]
+  0x0000000009c6e800 JavaThread "pool-1-thread-1"
