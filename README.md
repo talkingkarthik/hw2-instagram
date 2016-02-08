@@ -17,3 +17,9 @@ Advanced: Display a nice default placeholder graphic for each image during loadi
 Advanced: Improve the user interface through styling and coloring (1 to 5 points depending on the difficulty of UI improvements)
 Bonus: Allow user to view all comments for an image within a separate activity or dialog fragment (3 points)
 
+
+Walkthrough of all user stories:
+
+![Video Walkthrough](https://github.com/talkingkarthik/hw2-instagram/blob/master/app/src/main/res/drawable/hw1animation.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
