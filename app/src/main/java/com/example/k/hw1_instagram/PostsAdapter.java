@@ -57,6 +57,7 @@ public class PostsAdapter extends ArrayAdapter<Post> {
         }
         // Lookup view for data population
         TextView username = (TextView) convertView.findViewById(R.id.name);
+        TextView caption = (TextView) convertView.findViewById(R.id.caption);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
         ImageView picView = (ImageView) convertView.findViewById(R.id.picView);
         TextView likesCount = (TextView) convertView.findViewById(R.id.likes);
@@ -65,6 +66,7 @@ public class PostsAdapter extends ArrayAdapter<Post> {
 
         // Populate the data into the template view using the data object
         username.setText(post.getUser());
+        caption.setText(post.getCaption());
         likesCount.setText(post.getLikes().toString());
         lastLiked.setText(post.getLastLiked());
 

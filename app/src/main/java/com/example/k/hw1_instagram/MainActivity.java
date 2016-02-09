@@ -111,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
                             lastLiked = ((JSONObject)likers.get(0)).getString("full_name");
                         }
 
+                        JSONObject captionObj = item.getJSONObject("caption");
+                        String captionText = captionObj.getString("text");
+
 
                         JSONObject commentsObj = item.getJSONObject("comments");
                         JSONArray comments = commentsObj.getJSONArray("data");
@@ -129,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
                         }
 
-                        parrayNew.add(new Post(url, name, picUrl, count, lastLiked, postComments));
+                        parrayNew.add(new Post(url, name, picUrl, count, lastLiked, postComments, captionText));
 
                     }
                 } catch (JSONException e) {

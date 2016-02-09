@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class Post {
     private String imgUrl;
+    private String caption;
 
     private Integer likes;
     private String lastLiked;
@@ -16,13 +17,14 @@ public class Post {
 
     private ArrayList<Comment> comments = null;
 
-    public Post(String imgUrl, String user, String userImgUrl, Integer likes, String lastLiked, ArrayList<Comment> comments) {
+    public Post(String imgUrl, String user, String userImgUrl, Integer likes, String lastLiked, ArrayList<Comment> comments, String caption) {
         this.imgUrl = imgUrl;
         this.user = user;
         this.userImgUrl = userImgUrl;
         this.likes = likes;
         this.lastLiked = lastLiked;
         this.comments = comments;
+        this.caption = caption;
     }
 
     public String getImgUrl() {
@@ -71,5 +73,13 @@ public class Post {
 
     public void setComments(ArrayList<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getCaption() {
+        return caption;
+    }
+
+    public void setCaption(String caption) {
+        this.caption = caption;
     }
 }
